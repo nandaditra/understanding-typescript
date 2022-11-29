@@ -107,7 +107,7 @@
     "node_modules"
   ],
   "include": [
-    "src/app.ts",
+    "src/classes.ts",
     "src/analytics.ts"
   ]
 }
