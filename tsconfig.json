@@ -108,6 +108,7 @@
   ],
   "include": [
     "src/classes.ts",
-    "src/analytics.ts"
+    "src/analytics.ts",
+    "src/app.ts"
   ]
 }
