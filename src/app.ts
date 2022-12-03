@@ -1,29 +1,25 @@
-type Bos = {
-    name: string;
-    privileges: string[]
+interface Germany {
+    type: 'germany',
+    flyingSpeed: number;
 }
 
-type Manager = {
-    name: string;
-    startDate: Date;
+interface France {
+    type: 'france',
+    runningSpeed: number;
 }
 
-type BosiGer = Bos & Manager 
+type Euro = Germany | France 
 
-const p2: BosiGer = {
-    name: "Adam Girvil",
-    privileges: ["create-server"],
-    startDate : new Date()
-}
-
-type Combination = string | number;
-type Num = number | boolean 
-
-type Univ = Combination & Num;
-
-function AddComponent(a: Combination, b: Combination) {
-    if(typeof a === 'string' || typeof b === 'string') {
-        return a.toString() + b.toString()
+function moveNations(nation: Euro) {
+    let speed;
+    switch (nation.type) {
+       case 'germany':
+          speed = nation.flyingSpeed;
+          break ;
+       case 'france':
+          speed = nation.runningSpeed;
     }
-    return a + b
+    console.log('Moving to nations: '+ speed)
 }
+
+moveNations({type: 'germany', flyingSpeed: 10})

@@ -110,7 +110,8 @@
     "src/classes.ts",
     "src/analytics.ts",
     "src/interface.ts",
-    "intersection.ts",
-    "src/app.ts"
+    "src/intersection.ts",
+    "src/app.ts",
+    "src/guard.ts"
   ]
 }

@@ -1,13 +1,14 @@
 "use strict";
-const p2 = {
-    name: "Adam Girvil",
-    privileges: ["create-server"],
-    startDate: new Date()
-};
-function AddComponent(a, b) {
-    if (typeof a === 'string' || typeof b === 'string') {
-        return a.toString() + b.toString();
+function moveNations(nation) {
+    let speed;
+    switch (nation.type) {
+        case 'germany':
+            speed = nation.flyingSpeed;
+            break;
+        case 'france':
+            speed = nation.runningSpeed;
     }
-    return a + b;
+    console.log('Moving to nations: ' + speed);
 }
+moveNations({ type: 'germany', flyingSpeed: 10 });
 //# sourceMappingURL=app.js.map
